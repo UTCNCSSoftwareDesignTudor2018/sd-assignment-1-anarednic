@@ -1,0 +1,34 @@
+Prerequisites for installing the application:
+	- Eclipse
+	- MySQL Workbench
+	- MySQL Java Connector
+
+Steps of installation: 
+	- Open Eclipse and import the project named "Assignment1"
+	- Change in dbConnection class the details of the MySQL connection:
+		String driver = "com.mysql.jdbc.Driver";
+		String url = "jdbc:mysql://localhost:3306/assignment1";
+		String username = "root";
+		String password = "anarednic";
+	- Run main with the db.createTable() command available
+
+Steps of access:
+	- Run the application from Eclipse
+	- Enter an e-mail and password corresponding to a student or teacher stored in the database
+	- If you want to connect a student, just click Connect
+	- If you want to connect a teacher, select I'm a Teacher and click Connect
+	- If you want to connect a teacher as an Administrator, select I'm a Teacher, select Run as Administrator, and click Connect
+
+Scenarios:
+	- A Student can: view his personal data, 
+			 view the courses he is enrolled to and the grades corresponding to them, 
+			 view the courses he is not yet enrolled to,
+			 enter the ID of the course he wants to enroll to and click Enroll to proceed.
+	- A Teacher can: view his students and their groups,
+			 view his students and their grades.
+	- An Administrator can: view all the teachers,
+				view all the students and their groups,
+				view all the courses,
+				add a new teacher, update a teacher, delete a teacher
+				add a new students, update a student, delete a student
+				add a new course, update a course, delete a course

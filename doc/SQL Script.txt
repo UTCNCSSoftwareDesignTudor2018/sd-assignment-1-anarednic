@@ -1,0 +1,29 @@
+CREATE TABLE IF NOT EXISTS student(
+	id int NOT NULL AUTO_INCREMENT, 
+	name varchar(255) NOT NULL, 
+	cnp varchar(10), 
+	email varchar(255) NOT NULL, 
+	password varchar(255) NOT NULL, 
+	identificationNr varchar(255) NOT NULL, 
+	studentGroup varchar(255) NOT NULL, 
+	PRIMARY KEY(id));
+
+CREATE TABLE IF NOT EXISTS teacher(
+	id int NOT NULL AUTO_INCREMENT, 
+	name varchar(255) NOT NULL, 
+	email varchar(255) NOT NULL, 
+	password varchar(255) NOT NULL, 
+	idCourse int, 
+	PRIMARY KEY(id));
+
+CREATE TABLE IF NOT EXISTS course(
+	id int NOT NULL AUTO_INCREMENT, 
+	name varchar(255) NOT NULL, 
+	PRIMARY KEY(id));
+
+CREATE TABLE IF NOT EXISTS enrolment(
+	id int NOT NULL AUTO_INCREMENT, 
+	idStudent int, 
+	idCourse int, 
+	grade int, 
+	PRIMARY KEY(id));
